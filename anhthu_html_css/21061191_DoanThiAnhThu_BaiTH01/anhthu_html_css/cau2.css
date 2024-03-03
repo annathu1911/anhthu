@@ -1,0 +1,17 @@
+h3 {
+        padding: 30px 40px;
+        margin: 10px 350px;
+        font-size: 35px;
+        font-weight: bold;
+        white-space: nowrap;
+}
+.tag-button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #66FF33;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius:2px;
+    text-align: center;
+}
