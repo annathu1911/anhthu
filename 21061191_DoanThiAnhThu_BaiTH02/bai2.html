@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        color: rgb(158, 85, 227);
+    }
+    p {
+        text-align: center;
+    }
+    .container {
+        width: 600px;
+        margin: 0 auto;
+        background-color: #efefef;
+        padding: 20px;
+        text-align: center;
+    }
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    form {
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        margin-left: 43px;
+    }
+    input, select {
+        width: 250px;
+        height: 30px;
+        padding: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-right: 25px;
+    }
+    textarea {
+        width: 525px;
+        height: 80px;
+        padding: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    button {
+        padding: 20px 10 px;
+        border: none;
+        background-color: rgb(27, 2, 250);
+        color: white;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: background-color 0,3s ease;
+        width: 120px;
+        height: 30px;
+    }
+    button:hover {
+        background-color: #333;
+    }
+    #s1{
+        display: inline-flex;
+    }
+    #s2{
+        display: inline-flex;
+    }
+    #s3{
+        display: inline-flex;
+    }
+    
+</style>
+<body>
+    
+        <h2>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h2>
+         <p>Đóng góp của bạn sẽ được chúng tôi xem xét, vui lòng nhập tiếng việt có dấu <br>
+         Các ý kiến đóng góp nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm (nếu có).</p>
+         <div class="container">
+         <form action="#" onsubmit="return confirmFormSubmit()">
+            <div class="form-group" id="s1">
+                <input type="text" id="ho-ten" name="ho-ten" required placeholder="Nhập Họ và Tên">
+            </div>
+            <div class="form-group" id="s1">
+                <input type="text" id="ma-the" name="ma-the" required placeholder="Nhập Mã Thẻ">
+            </div>
+            <div class="form-group" id="s2">
+                <input type="text" id="so-dien-thoai" name="so-dien-thoai" required placeholder="Nhập Số điện thoại">
+            </div>
+            <div class="form-group" id="s2">
+                <input type="email" id="email" name="email" required placeholder="Nhập Email">
+            </div>
+            <div class="form-group" id="s3">
+                <select id="loai-kh" name="loai-kh">
+                    <option value="">--Chọn loại khách hàng--</option>
+                    <option value="new">Nomal</option>
+                    <option value="old">VIP</option>
+                </select>
+            </div>
+            <div class="form-group" id="s3">
+                <input type="text" id="ma-hoa-don" name="ma-hoa-don" required placeholder="Nhập Mã Hóa Đơn">
+            </div>
+            <div class="form-group" id="s4">
+                <textarea id="mo-ta" name="mo-ta" rows="5" required required placeholder="Nhập chi tiết mô tả"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">GỬI GÓP Ý <i class="fab fa-facebook-messenger"></i></button>
+            </div>
+            
+         </form>
+    </div>
+<script>
+    function confirmFormSubmit() {
+        var name = document.getElementById("ho-ten").value;
+        var cardcode = document.getElementById("ma-the").value;
+        var phonenumber = document.getElementById("so-dien-thoai").value;
+        var email = document.getElementById("email").value; 
+        var customer_type = document.getElementById("loai-kh").value;
+        var ordercode = document.getElementById("ma-hoa-don").value;
+        var mota = document.getElementById("mo-ta").value;
+        var message = "Thông tin của bạn :\n\n" +
+         "Họ và tên: " + name + "\n" +
+         "Mã thẻ: " + cardcode + "\n" +
+         "Số điện thoại: " + phonenumber + "\n" +
+         "Email: " + email + "\n" +
+         "Loại khách hàng: " + customer_type + "\n" +
+         "Mã hóa đơn: " + ordercode + "\n" +
+         "Chi tiết: " + mota; 
+        return confirm(message);
+    }
+
+</script>
+</body>
+</html>

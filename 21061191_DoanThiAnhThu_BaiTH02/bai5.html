@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height: auto;
+            display: flex;
+            justify-content: space-between; 
+        }
+
+        .login-form {
+            width: 100%; 
+        }
+
+        .login-button {
+            width: 100%; 
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            color: #fff;
+            width: 180px;
+            
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button[type="submit"] {
+            width: 30px;
+            height: 100px;
+            padding: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ea4253;
+        }
+        .button-with-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 10px;
+}
+
+.button-with-icon i {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.input-key {
+  position: relative;
+}
+
+.input-key input {
+  padding-right: 30px;
+}
+
+.input-key i {
+  position: absolute;
+  top: -4px;
+  right: 96px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Username">
+                </div>
+                <div class="input-group" >
+                    <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password">
+</div>
+            </form>
+        </div>
+        <div class="login-button">
+            <br>
+            <br>
+            <br>
+            <button class="button-with-icon" type="submit" form="loginForm"><i class="fas fa-lock fa-lg"></i></button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const username = document.querySelector('#username').value;
+    const password = document.querySelector('#password').value;
+
+   
+    if (username === 'anhthu' && password === '1911') {
+        confirm('Bạn muốn hiện mật khẩu')
+        window.location.href = 'bai5.html';
+    } else {
+        
+       
+    }
+});
+    </script>
+</body>
+</html>

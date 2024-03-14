@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bài 1</title>
+</head>
+<style>
+    h1 {
+        color: red;
+    }
+    #congthucphuongtrinhbac1 input[type="number"] {
+    width: 350px;
+    padding: 5px;
+    margin: 5px ;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#congthucphuongtrinhbac1 input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+</style>
+<body>
+    <center>
+    <h1>GIẢI PHƯƠNG TRÌNH BẬC I</h1>
+    <form id="congthucphuongtrinhbac1">
+        <label for="a"> Nhập hệ số a:</label>
+        <input type="number" id="a" name="a" required placeholder="Hệ số a "><br>
+        <label for="b">Nhập hệ số b:</label>
+        <input type="number" id="b" name="b" required placeholder="Hệ số b "><br>
+        <input type="submit" value="Giải Phương Trình">
+    </form>
+    <div id="ketqua" style="display:none;">
+        <h2>KẾT QUẢ:</h2>
+        <p id="nghiem"></p>
+    </div>
+    <script>
+        document.getElementById('congthucphuongtrinhbac1').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+
+            if (a === 0) {
+                document.getElementById('nghiem').textContent = 'Phương trình không thể giải được vì a = 0.';
+            } else {
+                var x = -b / a;
+                document.getElementById('nghiem').textContent = 'Nghiệm x = ' + x;
+            }
+
+            document.getElementById('ketqua').style.display = 'block';
+        });
+    </script>
+    </center>
+</body>
+</html>

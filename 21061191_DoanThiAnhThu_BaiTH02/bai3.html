@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        hr.custom-hr {
+            border-color: rgb(253, 3, 3); 
+            border-width: 3px;
+            width: 100%;
+        }
+       
+        .container {
+            display: flex;
+            justify-content: space-between; 
+            width: 100%;
+            height: 400px; 
+        }
+
+        .part {
+            padding: 10px; 
+        }
+
+        .part1 {
+            width: 30%; 
+        }
+
+        .part2 {
+            width: 80%; 
+        }
+        .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    input, select {
+        width: 500px;
+        height: 30px;
+        padding: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    button {
+        padding: 10px 20 px;
+        border: none;
+        background-color: rgb(40, 147, 149);
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0,3s ease;
+        width: 130px; 
+        height: 40px; 
+    }
+    button:hover {
+        background-color: #333;
+    }
+    body {
+        margin-left: 300px;
+    }
+    textarea {
+        width: 500px;
+        height: px;
+        padding: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+    <h1>LIÊN HỆ</h1>
+    <hr class="custom-hr">
+    <div class="container">
+        <div class="part part1">
+            <h2>Thông tin</h2>
+            <p> <img width="15" src="/hình/bai3.1-removebg-preview.png" alt="icon"> Kp.6, P. Linh Trung, Tp. Thủ Đức, Tp.HCM </p>
+            <p> <img width="15" src="/hình/bai3.2-removebg-preview.png" alt="icon"> info@uit.edu.vn</p>
+            <p> <img width="15" src="/hình/bai3.3-removebg-preview.png" alt="icon"> +84 28 372 52002 </p>
+        </div>
+
+        <div class="part part2">
+            <h2>Hãy liên lạc với chúng tôi bất cứ khi nào</h2>
+            <form action="#" onsubmit="return confirmFormSubmit()">
+           <div class="form-group">
+                <input type="text" id="ho-ten" name="ho-ten" required placeholder="Nhập Họ và Tên"> 
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Nhập Email">
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="text" id="tieu-de" name="tieu-de" required placeholder="Tiêu đề bài viết">
+            </div>
+            <br>
+            <div class="form-group">
+                <textarea id="noi-dung" name="noi-dung" rows="5" required required placeholder="Nội dung cần gửi"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">GỬI TIN NHẮN <i class="fas fa-check-circle"></i></button>
+            </div>
+        </form>
+           </div>
+        </div>
+    </div>
+    <script>
+        function confirmFormSubmit() {
+            var name = document.getElementById("ho-ten").value;
+            var email = document.getElementById("email").value; 
+            var tieude = document.getElementById("tieu-de").value;
+            var noidung = document.getElementById("noi-dung").value;
+            var message = "Thông tin của bạn :\n\n" +
+             "Họ và tên: " + name + "\n" +
+             "Email: " + email + "\n" +
+             "Tiêu đề bài viết: " + tieude + "\n" +
+             "Nội dung: " + noidung;
+            return confirm(message);
+        }
+    
+    </script>
+</body>
+</html>

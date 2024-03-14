@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài 4</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 0;
+        color: rgb(255, 255, 255);
+        background-color: blue;
+        background-size: 100px;
+        border-radius: 5px;
+    }
+    .container {
+    width: 20%; 
+    padding: 0px; 
+    border: 1px solid #ccc; 
+    background-color: #f0f0f0; 
+    border-radius: 5px; 
+}
+label {
+        color: rgb(0, 0, 0); 
+    }
+
+    input[type="number"], select {
+        width: 260px; 
+        padding: 5px;
+        border-radius: 5px; 
+        border: 1px solid #ccc; 
+    }
+
+    button[type="submit"] {
+        background-color: #49c3f8; 
+        color: white; 
+        padding: 10px 20px; 
+        border: 1px solid black; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        width: 150px;
+    }
+
+    #result {
+        color: red; 
+        width: 200px; 
+        padding: 10px; 
+        margin: 0 auto; 
+    }
+    body {
+    background: linear-gradient(to right, #02a92e, #0468f4); 
+    background-size: 600px auto; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    }
+</style>
+<body>
+    
+    <center>
+        <div class="container">
+    <h1>TÍNH CHỈ SỐ BMI</h1>
+    <form id="bmiForm">
+        <label for="weight">Nhập cân nặng (kg) ?</label> <br>
+        <input type="number" id="weight" name="weight" step="0.1" required><br><br>
+        <label for="height">Nhập chiều cao (m) ?</label> <br>
+        <input type="number" id="height" name="height" step="0.01" required><br><br>
+        <label for="requestType">Chọn loại tuổi ?</label><br>
+    <select id="AgeType" name="AgeType">
+      <option value="option1">- Chọn loại tuổi -</option>
+      <option value="option1">Trung niên</option>
+      <option value="option2">Trung niên, Già lớn tuổi</option>
+      <option value="option3">Già, lớn tuổi</option>
+    </select><br>
+    <br>
+        <button type="submit">TÍNH BMI</button>
+    </form>
+    <center>
+    <br>
+    <div>KẾT QUẢ</div>
+    <div id="result"></div> <br>
+    <script> document.getElementById('bmiForm').addEventListener('submit', function(event) 
+    { event.preventDefault(); var weight = parseFloat(document.getElementById('weight').value); 
+    var height = parseFloat(document.getElementById('height').value); if (isNaN(weight) || isNaN(height))
+     { document.getElementById('result').textContent = 'Please enter valid weight and height values.'; return; }
+      var bmi = weight / (height * height); var classification = ''; if (bmi < 18.5) { classification = 'Dưới chuẩn'; }
+       else if (bmi < 25) { classification = 'Bình thường'; } else if (bmi < 30) { classification = 'Thừa cân'; } else if
+        (bmi < 35) { classification = 'Béo phì cấp độ I'; } else if (bmi < 40) { classification = 'Béo phì cấp độ II'; }
+         else { classification = 'Béo phì cấp độ III'; } var recommendation = ''; 
+         var ageType = document.getElementById('AgeType').value; if (ageType === 'option1')
+          { recommendation = 'Khám định kỳ'; } else if (ageType === 'option2')
+           { recommendation = 'Tập thể dục thường xuyên'; } else if (ageType === 'option3')
+            { recommendation = 'Hạn chế ăn mỡ động vật'; } 
+            document.getElementById('result').textContent = 'Your BMI is: ' + bmi.toFixed(2) + 
+    ' (' + classification + '). ' + recommendation; }); </script>
+</body>
+</html>
