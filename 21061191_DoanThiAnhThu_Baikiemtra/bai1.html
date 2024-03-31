@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<style>
+    nav ul li {
+    display: inline;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Quicksand font;
+    background-color: #ece8e8;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    justify-content: space-around;
+    display: flex;
+}
+
+.sidebar {
+    float: left;
+    padding: 10px;
+    width: 30%;
+    flex-wrap: wrap;
+  margin-left: 29px;
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+.button{
+
+        width: 150px;
+        height: 150px;
+        margin-right: 30px;
+        color: black;
+}
+
+.image-frame {
+    overflow: hidden;
+    max-width: 100%; /* Đảm bảo ảnh không vượt ra khỏi khung */
+}
+
+.image-frame img {
+    max-width: 100%;
+    height: 350px;
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-frame:hover img {
+    transform: scale(1.1);
+}
+
+.new__card__button {
+    padding: 10px 20px; /* Kích thước nút */
+    background-color: #01057f; /* Màu nền */
+    color: #fff; /* Màu văn bản */
+    border: none; /* Loại bỏ viền */
+    border-radius: 3px; /* Độ cong của góc */
+    cursor: pointer; /* Con trỏ chuột khi di chuột qua */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.new__card__button:hover {
+    background-color: #004fed; /* Màu nền khi di chuột qua */
+}
+</style>
+<body>
+   
+<center>
+    <h1>LAPTOP DÀNH CHO HỌC TRỰC TUYẾN</h1>
+    <p>Do ảnh hưởng của covid trong năm học mới này, nhiều học sinh tại một số tỉnh thành phố Hà Nội, TPHCM sẽ phải tiến hành học tập qua hình thức online (trực <br> tuyến) dẫn đến nhu cầu mua máy tính xách tay(laptop) để học online tăng cao so với mọi năm. Các mẫu laptop có thể tham khảo:</p> 
+</center>
+
+<div class="sidebar">
+    
+    <div class="image-frame">
+    <img width="100%" src="/hình/anh1-removebg-preview.png">
+    <h2>Surface Laptop 3 13.5</h2>
+    </div>
+    <p>@Ngọc Hoàng 09 Sep 2023 (Đã xem 1024)<br> Thông tin sản phẩm và bảo hành<br> Tình trạng sản phẩm mới 100%, nguyên seal<br>Bảo hành 12 tháng 1 đổi 1 theo chính sách của<br> Microsoft<br>Phụ kiện: Máy, sạc, fullbox</p>
+        <div>
+        <button class="new__card__button">Đọc thêm</button>
+        </div>
+    </div>
+
+    <div class="sidebar">
+    
+        <div class="image-frame">
+        <img width="100%" src="/hình/anh4-removebg-preview.png">
+        <h2>Laptop Samsung X180 Barbie</h2>
+        </div>
+        <p>@Ngọc Hoàng 09 Sep 2023 (Đã xem 1024)<br> Thông tin sản phẩm và bảo hành<br> Tình trạng sản phẩm mới 100%, nguyên seal<br>Bảo hành 12 tháng 1 đổi 1 theo chính sách của<br> Microsoft<br>Phụ kiện: Máy, sạc, fullbox</p>
+        <div>
+            <button class="new__card__button">Đọc thêm</button>
+            </div>
+        </div>
+        <div class="sidebar">
+    
+            <div class="image-frame">
+            <img width="100%" src="/hình/anh2-removebg-preview.png">
+            <h2>ThinkPad X1 Carbon Gen 9</h2>
+            </div>
+            <p>@Ngọc Hoàng 09 Sep 2023 (Đã xem 1024)<br> Thông tin sản phẩm và bảo hành<br> Tình trạng sản phẩm mới 100%, nguyên seal<br>Bảo hành 12 tháng 1 đổi 1 theo chính sách của<br> Microsoft<br>Phụ kiện: Máy, sạc, fullbox</p>
+            <div>
+                <button class="new__card__button">Đọc thêm</button>
+                </div>
+            </div>
+    
+</body>
+</html>
