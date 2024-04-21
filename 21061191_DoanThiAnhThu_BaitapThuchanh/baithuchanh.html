@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with a banner -->
+    <header>
+        <div class="banner">
+          <img src="https://tuyensinh.iuh.edu.vn/templates/2015/image/bannerIUH_small.png" alt="Banner đại học">
+        </div>
+      </header>
+
+    <!-- Navigation with a dropdown menu -->
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Đào tạo</a>
+                <ul class="dropdown">
+                    <li><a href="#">Đồ họa</a></li>
+                    <li><a href="#">Web</a></li>
+                    <li><a href="#">Mạng</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tuyển sinh</a>
+                <ul class="dropdown">
+                    <li><a href="#">Tuyển sinh Đại học</a></li>
+                    <li><a href="#">Tuyển sinh chương trình liên kết</a></li>
+                    <li><a href="#">Tuyển sinh trình độ Tiến sĩ - Thạc sĩ</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Liên hệ</a>
+                <ul class="dropdown">
+                    <li><a href="#">Cơ sở TP.HCM</a></li>
+                    <li><a href="#">Phân hiệu Quãng Ngãi</a></li>
+                    <li><a href="#">Cơ sở Thanh Hóa</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main content area with an article on the right and aside on the left -->
+    <main>
+        <div class="container">
+            <!-- Aside (sidebar) on the left -->
+            <aside>
+                <h2>Thông báo v/v đăng ký học phần và đóng học phí học kỳ III năm học 2023 - 2024</h2>
+                <p>Thông báo v/v đăng ký học phần và đóng học phí học kỳ III năm học 2023 - 2024</p>
+            </aside>
+
+            <!-- Main content with an article on the right -->
+            <section>
+                <article>
+                    <h2>V/v Nghỉ lễ Giỗ tổ Hùng Vương (10/3 âm lịch), Ngày Giải phóng miền Nam (30/4) và Ngày Quốc tế lao động (01/05) năm 2024</h2>
+                    <p>Thông báo v/v nghỉ lễ Ngày Giỗ tổ Hùng Vương (10/3 âm lịch), Ngày Giải phóng miền Nam (30/4) và Ngày Quốc tế lao động (01/5) năm 2024</p>
+                <p>Thông báo v/v nghỉ lễ Ngày Giỗ tổ Hùng Vương (10/3 âm lịch), Ngày Giải phóng miền Nam (30/4) và Ngày Quốc tế lao động (01/5) năm 2024</p>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer at the bottom -->
+    <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>Về chúng tôi</h3>
+            <p>ĐẠI HỌC CÔNG NGHIỆP TP. HỒ CHÍ MINH</p>
+          </div>
+          <div class="footer-column">
+            <h3>Hoạt động</h3>
+            <ul>
+              <li><a href="#">Hình ảnh hoạt động</a></li>
+              <li><a href="#">Tư vấn tuyển sinh</a></li>
+              <li><a href="#">Thông tin tuyển sinh</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Liên hệ</h3>
+            <ul>
+              <li><a href="#">Điện thoại: 0283.8940390 - 525</a></li>
+              <li><a href="#">Địa chỉ: 12 Nguyễn Văn Bảo, P.4, Q. Gò Vấp, TP. Hồ Chí Minh
+                Phòng Đào tạo - Tầng trệt - Nhà B </a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#flip").click(function(){
+    $("#panel").toggle("slow");
+    });
+    });
+    </script>
+
+</body>
+</html>
